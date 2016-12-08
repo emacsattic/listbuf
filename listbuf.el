@@ -8,7 +8,7 @@
 ;; Created: 1991-10-03
 ;; Status: Believed to work in any version of Emacs or XEmacs
 
-;; $Id: listbuf.el,v 1.20 2007/07/19 03:08:24 friedman Exp $
+;; $Id: listbuf.el,v 1.21 2016/11/24 20:24:53 friedman Exp $
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -750,7 +750,7 @@ This also works for remote file names that use efs or ange-ftp."
       (setq comp (cdr comp))
 
       (and (string-match (aref os-info 0) tem)
-           (setq tem (string-to-int (funcall (aref os-info 1) tem)))
+           (setq tem (string-to-number (funcall (aref os-info 1) tem)))
            (or (null rev)
                (> tem rev))
            (setq rev tem)))
